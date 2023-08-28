@@ -36,7 +36,6 @@ export const MovieImgThumbnail = styled.TouchableOpacity`
 export const MovieText = styled.Text`
     color: #ffff;
     fontSize: 18px;
-    fontWeight:700px;
+    fontWeight:700;
     padding: 15px;
 `
-

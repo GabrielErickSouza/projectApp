@@ -1,3 +1,10 @@
+import {ImageSourcePropType} from 'react-native'
+
+export type Movie = {
+  id:string,
+  nome:string,
+  moviesURL:ImageSourcePropType
+}
 export const MOVIESWATCH = [
   {
     id: "1",

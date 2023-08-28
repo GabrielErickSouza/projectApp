@@ -10,6 +10,8 @@ import { MovieCards } from '../../components/MovieCards';
 import { MOVIESCRIME } from '../../utils/moviesCrimes';
 import { MOVIESWATCH } from '../../utils/moviesWatch';
 
+
+
 export const Home = () => {
     return (
         <C.Container>
@@ -42,6 +44,7 @@ export const Home = () => {
                 renderItem={({item}) => <MovieCards movieURL={item.moviesURL} />}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{paddingLeft:18}}
             />
             <C.MovieText>Crime Movies</C.MovieText>
             <FlatList 
@@ -50,14 +53,16 @@ export const Home = () => {
                 renderItem={({item}) => <MovieCards movieURL={item.moviesURL} />}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{paddingLeft:18}}
             />
             <C.MovieText>Watch in your language</C.MovieText>
             <FlatList 
                 data={MOVIESWATCH}
-                keyExtractor={item => item.id}
+                keyExtractor={(item) => item.id}
                 renderItem={({item}) => <MovieCards movieURL={item.moviesURL} />}
                 horizontal
                 showsHorizontalScrollIndicator={false}
+                contentContainerStyle={{paddingLeft:18}}
             />
             </ScrollView>
         </C.Container>
